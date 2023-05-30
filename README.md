@@ -1,15 +1,54 @@
-# Unlocking the Power of Cloud: Deepesh's Perspective
-A Personal website showcasing Deepesh's cloud engineering expertise, AWS knowledge, and DevOps skills. Explore cloud insights, best practices, and resources. Hosted on GitHub Pages. 
+<div align="center">
+  
+  ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/wren)
+  ![GitHub stars](https://img.shields.io/github/stars/codewithsadee/wren?style=social)
+  ![GitHub forks](https://img.shields.io/github/forks/codewithsadee/wren?style=social)
+  [![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee)
+  [![YouTube Video Views](https://img.shields.io/youtube/views/Pup-yi4oMfU?style=social)](https://youtu.be/Pup-yi4oMfU)
 
+  <br />
+  <br />
 
-Welcome to Deepesh's Cloud DevOps World! With over 7 years of experience as a seasoned Cloud DevOps Engineer, I specialize in architecting and implementing migration infrastructure in both AWS and Azure. I am passionate about leveraging the power of cloud technologies to drive seamless and efficient transitions to the cloud.
+  <h2 align="center">Wren - Personal Blog Website</h2>
 
-On this website, you will find a wealth of insights, solutions, and resources related to cloud migration, DevOps practices, and building scalable cloud infrastructure. Join me on this journey as we explore the intricacies of cloud engineering, automation, and continuous integration and delivery (CI/CD) pipelines.
+  Wren is a fully responsive personal blog website, <br />Responsive for all devices, build using HTML, CSS, and JavaScript.
 
-Discover expert guidance, best practices, and real-world examples that demonstrate how I have successfully executed cloud migration projects and optimized infrastructure for various organizations. From designing resilient architectures to implementing cost-effective solutions, I am dedicated to helping businesses harness the full potential of the cloud.
+  <a href="https://codewithsadee.github.io/wren/"><strong>➥ Live Demo</strong></a>
 
-Whether you're a fellow cloud enthusiast, a DevOps practitioner, or a business seeking guidance on cloud migration strategies, this platform is designed to empower you. Let's unlock the possibilities of cloud computing together and drive innovation in the ever-evolving world of technology.
+</div>
 
-Join me on this exciting journey and let's transform the way businesses operate in the cloud!"
+<br />
 
-Feel free to customize and refine this description to align it with your personal style and the specific aspects you'd like to highlight on your website.
+### Demo Screeshots
+
+![Wren Desktop Demo](./readme-images/desktop.png "Desktop Demo")
+
+### Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+
+### Run Locally
+
+To run **Wren** locally, run this command on your git bash:
+
+Linux and macOS:
+
+```bash
+sudo git clone https://github.com/codewithsadee/wren.git
+```
+
+Windows:
+
+```bash
+git clone https://github.com/codewithsadee/wren.git
+```
+
+### Contact
+
+If you want to contact with me you can reach me at [Twitter](https://www.twitter.com/codewithsadee).
+
+### License
+
+[MIT](https://choosealicense.com/licenses/mit/)
