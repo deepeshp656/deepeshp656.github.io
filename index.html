@@ -42,15 +42,8 @@
   <!-- Add Firebase SDK legacy script tags -->
   <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore-compat.js"></script>
-  <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  <script>
+    // Initialize Firebase
     const firebaseConfig = {
       apiKey: "AIzaSyCckXtK3mwsQnensxY6FEFSsDrii4RfhNA",
       authDomain: "result-2e968.firebaseapp.com",
@@ -60,23 +53,24 @@
       appId: "1:254160095128:web:3c689d11a830b741440ded",
       measurementId: "G-EVQDTS6Q3Y"
     };
-  
+    firebase.initializeApp(firebaseConfig);
+
     document.addEventListener("DOMContentLoaded", function() {
       // Function to fetch data from Firebase
       function fetchDataFromFirebase() {
-        const id = document.getElementById('inputId').value;
-        const firestore = firebase.firestore();
+        var id = document.getElementById('inputId').value;
+        var firestore = firebase.firestore();
 
-        firestore.collection('your_collection_name').doc(id).get()
-          .then((doc) => {
+        firestore.collection('result').doc(id).get()
+          .then(function(doc) {
             if (doc.exists) {
-              const result = doc.data();
+              var result = doc.data();
               document.getElementById('result').textContent = JSON.stringify(result);
             } else {
               document.getElementById('result').textContent = "No result found for the given ID.";
             }
           })
-          .catch((error) => {
+          .catch(function(error) {
             console.log("Error getting document:", error);
             document.getElementById('result').textContent = "An error occurred while fetching data.";
           });
