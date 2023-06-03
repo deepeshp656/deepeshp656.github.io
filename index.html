@@ -58,10 +58,28 @@
       measurementId: "G-EVQDTS6Q3Y"
     };
   
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-  </script>
+    firebase.initializeApp(firebaseConfig);
+
+// Function to fetch data from Firebase
+function fetchDataFromFirebase() {
+  const id = document.getElementById('inputId').value;
+  const firestore = firebase.firestore();
+
+  firestore.collection('your_collection_name').doc(id).get()
+    .then((doc) => {
+      if (doc.exists) {
+        const result = doc.data();
+        document.getElementById('result').textContent = JSON.stringify(result);
+      } else {
+        document.getElementById('result').textContent = "No result found for the given ID.";
+      }
+    })
+    .catch((error) => {
+      console.log("Error getting document:", error);
+      document.getElementById('result').textContent = "An error occurred while fetching data.";
+    });
+}
+</script>
 </head>
 
 <body id="top">
