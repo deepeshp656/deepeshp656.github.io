@@ -39,6 +39,9 @@
   <link rel="preload" as="image" href="./assets/images/pattern-3.svg">
 
   <title>Firebase Data Fetch</title>
+  <!-- Add Firebase SDK legacy script tags -->
+  <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore-compat.js"></script>
   <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
@@ -58,28 +61,31 @@
       measurementId: "G-EVQDTS6Q3Y"
     };
   
-    firebase.initializeApp(firebaseConfig);
+    document.addEventListener("DOMContentLoaded", function() {
+      // Function to fetch data from Firebase
+      function fetchDataFromFirebase() {
+        const id = document.getElementById('inputId').value;
+        const firestore = firebase.firestore();
 
-// Function to fetch data from Firebase
-function fetchDataFromFirebase() {
-  const id = document.getElementById('inputId').value;
-  const firestore = firebase.firestore();
-
-  firestore.collection('result').doc(id).get()
-    .then((doc) => {
-      if (doc.exists) {
-        const result = doc.data();
-        document.getElementById('result').textContent = JSON.stringify(result);
-      } else {
-        document.getElementById('result').textContent = "No result found for the given ID.";
+        firestore.collection('your_collection_name').doc(id).get()
+          .then((doc) => {
+            if (doc.exists) {
+              const result = doc.data();
+              document.getElementById('result').textContent = JSON.stringify(result);
+            } else {
+              document.getElementById('result').textContent = "No result found for the given ID.";
+            }
+          })
+          .catch((error) => {
+            console.log("Error getting document:", error);
+            document.getElementById('result').textContent = "An error occurred while fetching data.";
+          });
       }
-    })
-    .catch((error) => {
-      console.log("Error getting document:", error);
-      document.getElementById('result').textContent = "An error occurred while fetching data.";
+
+      // Attach event listener to the button
+      document.getElementById('fetchButton').addEventListener('click', fetchDataFromFirebase);
     });
-}
-</script>
+  </script>
 </head>
 
 <body id="top">
@@ -130,14 +136,7 @@ function fetchDataFromFirebase() {
           </li>
 
         </ul>
-        <div>
-        <h1>Fetch Data from Firebase</h1>
-        <label for="inputId">Enter ID:</label>
-        <input type="text" id="inputId">
-        <button onclick="fetchDataFromFirebase()">Fetch Data</button>
-        <div id="result"></div>
 
-      </div>
         <div class="navbar-bottom">
 
 
@@ -203,6 +202,9 @@ function fetchDataFromFirebase() {
 
 
 
+
+  
+
   <main>
     <article>
 
@@ -221,9 +223,14 @@ function fetchDataFromFirebase() {
               I’m <span class="span">Deepesh Patel</span>
             </h1>
 
-            <p class="hero-text">
+            <!-- <p class="hero-text">
               I am a DevOps engineer with 7+ years of experience. I specialize in utilizing cloud technologies to boost businesses and drive growth. With a passion for innovation and a focus on optimizing workflows, I connect clients with the power of the cloud to enhance their performance. Let's thrive in the digital era together!
-            </p>
+            </p> -->
+            <h1>Fetch Data from Firebase</h1>
+            <label for="inputId">Enter ID:</label>
+            <input type="text" id="inputId">
+            <button id="fetchButton" class="btn btn-primary" >Fetch Data</button>
+            <div id="result"></div>
 
             <div class="input-wrapper">
 
