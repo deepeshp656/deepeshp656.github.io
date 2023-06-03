@@ -38,6 +38,30 @@
   <link rel="preload" as="image" href="./assets/images/pattern-2.svg">
   <link rel="preload" as="image" href="./assets/images/pattern-3.svg">
 
+  <title>Firebase Data Fetch</title>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCckXtK3mwsQnensxY6FEFSsDrii4RfhNA",
+      authDomain: "result-2e968.firebaseapp.com",
+      projectId: "result-2e968",
+      storageBucket: "result-2e968.appspot.com",
+      messagingSenderId: "254160095128",
+      appId: "1:254160095128:web:3c689d11a830b741440ded",
+      measurementId: "G-EVQDTS6Q3Y"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
 </head>
 
 <body id="top">
@@ -88,7 +112,11 @@
           </li>
 
         </ul>
-
+        <h1>Fetch Data from Firebase</h1>
+        <label for="inputId">Enter ID:</label>
+        <input type="text" id="inputId">
+        <button onclick="fetchDataFromFirebase()">Fetch Data</button>
+        <div id="result"></div>
         <div class="navbar-bottom">
 
           <div class="profile-card">
