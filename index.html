@@ -65,7 +65,7 @@ function fetchDataFromFirebase() {
   const id = document.getElementById('inputId').value;
   const firestore = firebase.firestore();
 
-  firestore.collection('your_collection_name').doc(id).get()
+  firestore.collection('result').doc(id).get()
     .then((doc) => {
       if (doc.exists) {
         const result = doc.data();
