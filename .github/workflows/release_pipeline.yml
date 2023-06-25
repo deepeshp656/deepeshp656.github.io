@@ -6,7 +6,7 @@ on:
       - main
       - production
 env:
-    #ENVIRONMENT: staging                                         # e.g production-11 or staging                                    # e.g username
+    #ENVIRONMENT: staging                                       # e.g production-11 or staging                                    # e.g username
     ECR_REPOSITORY: "lloyd"                           # e.g upsider/images/email-service
     REPO_NAME: "lloyd"
     GH_TOKEN: ${{ secrets.GH_TOKEN }}
