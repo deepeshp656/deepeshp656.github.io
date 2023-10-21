@@ -1,19 +1,13 @@
-name: Release Pipeline
+name: Semantic Release
 
 on:
   push:
     branches:
-      - main
       - production
-env:
-    #ENVIRONMENT: staging                                       # e.g production-11 or staging                                    # e.g username
-    ECR_REPOSITORY: "lloyd"                           # e.g upsider/images/email-service
-    REPO_NAME: "lloyd"
-    GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
 jobs:
   release:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -21,10 +15,15 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "18"
+          node-version: 14
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
-      - name: Release
-        run: npx semantic-release --no-ci
+      - name: Configure GitHub Token
+        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > .npmrc
+
+      - name: Semantic Release
+        run: npx semantic-release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
