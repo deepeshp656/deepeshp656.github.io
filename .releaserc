@@ -2,7 +2,7 @@
     "branches": [
       {
         "name": "main",
-        "prerelease": ""
+        "prerelease": "v"
       },
       {
         "name": "production",
