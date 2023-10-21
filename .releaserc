@@ -28,6 +28,16 @@
       { "type": "feat", "release": "minor" },
       { "type": "fix", "release": "patch" },
       { "type": "perf", "release": "patch" }
-    ]
+    ],
+    "presetConfig": {
+      "types": [
+        { "type": "feat", "section": "Features" },
+        { "type": "fix", "section": "Bug Fixes" },
+        { "type": "chore", "release": "patch" },
+        { "type": "ci", "release": "patch" }
+      ],
+      "increment": "patch", // or "minor" for pre-releases
+      "format": "v${version}" // Customize the version format
+    }
   }
   
