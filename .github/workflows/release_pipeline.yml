@@ -24,7 +24,7 @@ jobs:
         run: npm install
 
       - name: Configure GitHub Token
-        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > .npmrc
+        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GH_TOKEN }}" > .npmrc
 
       - name: Check Semantic Release installation
         run: npx semantic-release --dry-run
@@ -32,4 +32,4 @@ jobs:
       - name: Run Semantic Release
         run: npx semantic-release
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
