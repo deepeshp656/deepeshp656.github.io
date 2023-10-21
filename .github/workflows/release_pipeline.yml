@@ -8,6 +8,7 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -15,21 +16,20 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 20  # Adjust this to the Node.js version you need
-
-      - name: Clear npm cache
-        run: npm cache clean --force
+          node-version: 14  # Adjust to your preferred Node.js version
 
       - name: Install dependencies
-        run: npm install
-
-      - name: Configure GitHub Token
-        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GH_TOKEN }}" > .npmrc
-
-      - name: Check Semantic Release installation
-        run: npx semantic-release --dry-run
+        run: npm ci
 
       - name: Run Semantic Release
-        run: npx semantic-release
+        run: npm run release
+
+      - name: Push changes
+        run: git push --follow-tags
+
+      - name: Create a GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: dist/*  # Adjust the path to your release artifacts
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
