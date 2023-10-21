@@ -6,7 +6,7 @@ on:
       - main
 env:
   GH_TOKEN: ${{ secrets.GH_TOKEN }}
-  
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -19,23 +19,19 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
           ref: ${{ github.ref }}
 
-      - name: setup node
-        uses: actions/setup-node@v2
-        with:
-          node-version: 18
-
-      - name: Install dependencies
-        run: npm install
-  
-      - name: Run Semantic Release
-        run: npx -p @semantic-release/changelog -p @semantic-release/git -p semantic-release semantic-release
-
-      - name: get-npm-version
-        # if: ${{ github.event_name == 'push' }}
-        id: package-version
-        uses: martinbeentjes/npm-get-version-action@main
-
-      - name: validate version
+      - name: Get latest pre-release tag
+        id: pre-release-tag
         run: |
-          echo "app-version: ${{ steps.package-version.outputs.current-version}}"
-          echo "TAG: ${{steps.package-version.outputs.current-version}}"  
+          pre_release_tag=$(git describe --abbrev=0 --tags --match "*-*")
+          echo "::set-output name=pre_release_tag::$pre_release_tag"
+        
+      - name: Get latest release tag
+        id: release-tag
+        run: |
+          release_tag=$(git describe --abbrev=0 --tags --match "[0-9]*.[0-9]*.[0-9]*")
+          echo "::set-output name=release_tag::$release_tag"
+
+      - name: Display tags
+        run: |
+          echo "Latest Pre-release tag: ${{ steps.pre-release-tag.outputs.pre_release_tag }}"
+          echo "Latest Release tag: ${{ steps.release-tag.outputs.release_tag }}"
