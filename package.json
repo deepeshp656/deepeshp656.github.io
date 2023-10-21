@@ -1,17 +1,20 @@
 {
-  "name": "Deepeshp656",
-  "version": "0.0.0",
-  "scripts": {
-    "release": "semantic-release"
-  },
+  "name": "lloyd",
+  "version": "1.0.1",
+  "description": "lloyd project with semantic release v1",
+  "author": "DevOps-team",
+  "license": "MIT",
   "devDependencies": {
-    "semantic-release": "^17.3.7",
     "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/github": "^5.5.8",
+    "@semantic-release/commit-analyzer": "^10.0.1",
     "@semantic-release/exec": "^6.0.3",
-    "@semantic-release/git": "^10.0.1"
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/release-notes-generator": "^11.0.3",
+    "conventional-changelog-conventionalcommits": "^6.1.0",
+    "semantic-release": "^21.0.5"
   },
-  "release": {
-    "branches": ["main"]
+  "scripts": {
+    "version": "npm run update-version && git add package.json",
+    "update-version": "node scripts/update-version.js"
   }
 }
