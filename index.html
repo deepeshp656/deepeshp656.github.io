@@ -1,367 +1,352 @@
 <!doctype html>
-<html class=no-js lang=en>
-
-<!-- Mirrored from preview.uideck.com/items/freelancer/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Jun 2023 03:39:14 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<html lang="en">
 <head>
-<meta charset=utf-8>
+  <meta charset="utf-8">
+  <title>Deepesh Patel | SRE & Cloud Architect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.lineicons.com/3.0/lineicons.css">
+  
+  <style>
+    :root {
+      --bg-oxford-blue: hsla(222, 44%, 13%, 1);
+      --bg-oxford-blue-2: hsla(222, 47%, 11%, 1);
+      --text-columbia-blue: hsla(199, 69%, 84%, 1);
+      --text-slate-gray: hsla(217, 17%, 48%, 1);
+      --gradient-2: linear-gradient(90deg, #0ea5ea, #0bd1d1 51%, #0ea5ea);
+      --shadow-1: 0 8px 20px 0 hsla(0, 0%, 0%, 0.05);
+      --transition-2: 0.5s ease;
+    }
 
-<title>Deepesh Patel</title>
-<meta name=description content="">
-<meta name=viewport content="width=device-width, initial-scale=1">
+    body { font-family: 'Noto Sans', sans-serif; color: #334155; background-color: #f8fafc; line-height: 1.6; }
+    
+    /* Navigation */
+    .navbar { background-color: var(--bg-oxford-blue-2); padding: 15px 0; }
+    .navbar-nav .nav-link { color: #fff !important; font-weight: 500; margin: 0 10px; transition: 0.3s;}
+    .navbar-nav .nav-link:hover { color: #0ea5ea !important; }
 
-<link rel="shortcut icon" href="assets/images/xfavicon.png.pagespeed.ic.oF1zZt4DEs.png" type="image/png">
+    /* Hero Section */
+    .header_hero { background-color: var(--bg-oxford-blue-2); color: #fff; padding: 120px 0 80px; }
+    .header_title { font-size: 3.2rem; font-weight: 800; color: #ffffff; margin-bottom: 10px; }
+    .header_sub_title { color: #0ea5ea; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+    .header_hero p { color: var(--text-columbia-blue); font-size: 1.1rem; line-height: 1.7; margin: 20px 0 35px; }
+    
+    /* Buttons */
+    .main-btn {
+      background-image: var(--gradient-2); background-size: 200% auto; color: #fff;
+      padding: 14px 35px; border-radius: 6px; font-weight: 600; transition: var(--transition-2);
+      border: none; cursor: pointer; display: inline-block; text-decoration: none;
+    }
+    .main-btn:hover { background-position: right center; color: #fff; transform: translateY(-2px); text-decoration: none;}
+    
+    .outline-btn {
+      background: transparent; color: #0ea5ea; border: 2px solid #0ea5ea;
+      padding: 12px 33px; border-radius: 6px; font-weight: 600; transition: 0.3s;
+      display: inline-block; text-decoration: none;
+    }
+    .outline-btn:hover { background: #0ea5ea; color: #fff; text-decoration: none; transform: translateY(-2px); }
 
-<link rel=stylesheet href="assets/css/A.animate.css%2bslick.css%2blineicons.css%2bbootstrap.min.css%2bdefault.css%2cMcc.w-QmTdwWk2.css.pagespeed.cf.feBWxFu8ZT.css">
+    /* Typography */
+    .section_title { margin-bottom: 50px; text-align: center; }
+    .sub_title { color: #0ea5ea; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.9rem;}
+    .main_title { font-size: 2.5rem; font-weight: 800; color: var(--bg-oxford-blue); }
+    
+    /* Standard Cards */
+    .custom-card {
+      background: #ffffff; padding: 40px 30px; border-radius: 12px;
+      box-shadow: var(--shadow-1); transition: var(--transition-2); margin-bottom: 30px; border: 1px solid #f1f5f9; height: 100%;
+    }
+    .custom-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px -5px rgba(0,0,0,0.1); border-color: #0ea5ea; }
+    .card-icon { font-size: 45px; color: #0ea5ea; margin-bottom: 20px; display: block;}
+    .card-title { font-weight: 700; color: var(--bg-oxford-blue); margin-bottom: 15px; font-size: 1.25rem;}
+    .project-card p { font-size: 0.95rem; color: var(--text-slate-gray); }
 
-
-
-
-
-<link rel=stylesheet href="assets/css/A.style.css.pagespeed.cf.MOZv-lI8IM.css">
+    /* 3D Flip Cards for Core Competencies & Projects */
+    .flip-card {
+      background-color: transparent;
+      height: 280px;
+      perspective: 1000px;
+      margin-bottom: 30px;
+    }
+    .project-flip-card {
+      height: 420px; /* Taller for project descriptions */
+    }
+    .flip-card-inner {
+      position: relative; width: 100%; height: 100%;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-style: preserve-3d;
+    }
+    .flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+    
+    .flip-card-front, .flip-card-back {
+      position: absolute; width: 100%; height: 100%;
+      -webkit-backface-visibility: hidden; backface-visibility: hidden;
+      border-radius: 12px; padding: 35px 25px; box-shadow: var(--shadow-1);
+      border: 1px solid #f1f5f9; background: #fff;
+      overflow: hidden;
+    }
+    
+    /* Center aligned for Services */
+    .flip-card-back {
+      transform: rotateY(180deg); border-color: #0ea5ea; background: var(--bg-oxford-blue);
+      display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+    }
+    .flip-card-back h4 { color: #fff; font-weight: 700; margin-bottom: 20px; font-size: 1.2rem;}
+    .flip-card-back .stat { color: #0ea5ea; font-size: 2.2rem; font-weight: 800; line-height: 1; }
+    .flip-card-back .stat-label { color: var(--text-columbia-blue); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px;}
+    
+    /* Left aligned for Project Details */
+    .project-flip-back {
+      justify-content: flex-start; align-items: flex-start; text-align: left; padding: 35px 25px;
+      overflow-y: auto; /* Allows scrolling if text is too long */
+    }
+    .project-flip-back h4 { color: #0ea5ea; font-size: 1rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 15px;}
+    .project-flip-back p { color: #fff; font-size: 0.95rem; line-height: 1.7; font-weight: 400; margin-bottom: 10px; }
+    
+    /* Experience Cards */
+    .work_experience_area { padding: 80px 0; background: #ffffff; }
+    .single_experience {
+      background: #f8fafc; padding: 35px; border-left: 4px solid #0ea5ea;
+      border-radius: 0 12px 12px 0; margin-bottom: 30px; box-shadow: var(--shadow-1);
+    }
+    .experience_title .title { font-weight: 700; color: var(--bg-oxford-blue); font-size: 1.4rem; margin-bottom: 5px;}
+    .experience_title p { color: #0ea5ea; font-weight: 600; margin-bottom: 5px;}
+    .experience_title .date { color: var(--text-slate-gray); font-size: 0.9rem; font-weight: 600;}
+    
+    /* Footer */
+    .footer_area { background: var(--bg-oxford-blue-2); padding: 40px 0; text-align: center; color: var(--text-slate-gray); }
+    .footer_area a { color: #0ea5ea; text-decoration: none; font-weight: 500; margin: 0 10px; font-size: 1.5rem;}
+  </style>
 </head>
+
 <body>
-<!--[if IE]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
 
-<div class=preloader>
-<div class=loader>
-<div class=ytp-spinner>
-<div class=ytp-spinner-container>
-<div class=ytp-spinner-rotator>
-<div class=ytp-spinner-left>
-<div class=ytp-spinner-circle></div>
-</div>
-<div class=ytp-spinner-right>
-<div class=ytp-spinner-circle></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-<section class=header_area>
-<div class=header_navbar>
-<div class=container>
-<div class=row>
-<div class=col-lg-12>
-<nav class="navbar navbar-expand-lg">
-<a class=navbar-brand href=index.html>
-<img src="assets/images/logo.png" style="max-width: 200px; height : 100px; position: absolute; top: 0;" alt=Logo>
-</a>
-<button class=navbar-toggler type=button data-toggle=collapse data-target="#navbarSupportedContent" aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
-<span class=toggler-icon></span>
-<span class=toggler-icon></span>
-<span class=toggler-icon></span>
-</button>
-<div class="collapse navbar-collapse sub-menu-bar" id=navbarSupportedContent>
-<ul id=nav class="navbar-nav ml-auto">
-<li class="nav-item active">
-<a class=page-scroll href="#home">Home <span></span></a>
-</li>
-<li class=nav-item>
-<a class=page-scroll href="#about">About<span></span></a>
-</li>
-<li class=nav-item>
-<a class=page-scroll href="#services">Services<span></span></a>
-</li>
-<li class=nav-item>
-<a class=page-scroll href="#project">Portfolio<span></span></a>
-</li>
-<li class=nav-item>
-<a class=page-scroll href="resume.html">Resume<span></span></a>
-</li>
-<li class=nav-item>
-<a class=page-scroll href="#work">Experience<span></span></a>
-</li>
-</ul>
-</div> 
-</nav> 
-</div>
-</div> 
-</div> 
-</div> 
-<div id=home class=header_hero>
-<ul class="header_social d-none d-lg-block">
-<li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
-<li><a href="#"><i class="lni lni-twitter-filled"></i></a></li>
-<li><a href="#"><i class="lni lni-instagram-filled"></i></a></li>
-<li><a href="#"><i class="lni lni-linkedin-original"></i></a></li>
-</ul>
-<div class=container>
-<div class="row align-items-center justify-content-center justify-content-lg-between">
-<div class=col-lg-6>
-<div class="header_hero_content mt-45">
-<h5 class="header_sub_title wow fadeInUp" data-wow-duration=1.3s data-wow-delay=0.2s>Hello I'm</h5>
-<h2 class="header_title wow fadeInUp" data-wow-duration=1.3s data-wow-delay=0.5s>Deepesh Patel</h2>
-<span class="wow fadeInUp" data-wow-duration=1.3s data-wow-delay=0.8s>Professional DevOps Engineer and Cloud Architect.</span>
-<p class="wow fadeInUp" data-wow-duration=1.3s data-wow-delay=1.1s>I specialize in delivering top-notch DevOps solutions, optimizing cloud infrastructure, and streamlining CI/CD pipelines. With years of experience and a passion for innovation, I help businesses achieve operational excellence and accelerated software delivery. Let's collaborate to transform your development processes and drive your success to new heights.</p>
-<a href="#contact" class="main-btn wow fadeInUp" data-wow-duration=1.3s data-wow-delay=1.4s>Hire Me</a>
-</div> 
-</div>
-<div class="col-lg-6 col-md-6 col-sm-7">
-<div class="header_hero_image mt-50 wow fadeInRightBig" data-wow-duration=1.3s data-wow-delay=1.8s>
-<img src="assets/images/hero.png" alt=hero>
-</div> 
-</div>
-</div> 
-</div> 
-<div class="header_hero_shape d-none d-lg-block"></div> 
-</div> 
-</section>
-
-
-<section id=about class="about_area pt-70 pb-120">
-<div class=container>
-<div class="row align-items-center justify-content-center">
-<div class="col-lg-6 col-md-9">
-<div class="about_image mt-50 wow fadeInRightBig" data-wow-duration=1.3s data-wow-delay=0.5s>
-<img src="assets/images/about_hero.png" alt=Hero>
-<div class=about_shape></div>
-</div> 
-</div>
-<div class=col-lg-6>
-<div class="about_content mt-45 wow fadeInLeftBig" data-wow-duration=1.3s data-wow-delay=0.5s>
-<div class=section_title>
-<h5 class=sub_title>About</h5>
-<h3 class=main_title>Why You Hire Me?</h3>
-<ul class=line>
-<li></li>
-<li></li>
-<li></li>
-</ul>
-</div> 
-<p>I am Deepesh Patel, a highly skilled DevOps professional with a strong background in cloud computing and build/release engineering. With over 7 years of experience, I specialize in automating, building, deploying, and releasing code across various environments. My expertise lies in creating robust CI/CD pipelines, optimizing AWS cloud infrastructure, and implementing Infrastructure as Code principles.</p>
-<div class="about_skills pt-15">
-  <div class="skill_item mt-20">
-    <div class=skill_header>
-    <h6 class=skill_title>DevOps</h6>
-    <div class=skill_percentage>
-    <p><span class=counter>80</span>%</p>
-    </div>
-    </div>
-    <div class=skill_bar>
-    <div class=bar_inner>
-    <div class="bar progress_line" data-width=80></div>
-    </div>
-    </div>
-    </div> 
-<div class="skill_item mt-20">
-
-<div class=skill_header>
-<h6 class=skill_title>AWS/Azure</h6>
-<div class=skill_percentage>
-<p><span class=counter>85</span>%</p>
-</div>
-</div>
-<div class=skill_bar>
-<div class=bar_inner>
-<div class="bar progress_line" data-width=85></div>
-</div>
-</div>
-</div> 
-<div class="skill_item mt-20">
-<div class=skill_header>
-<h6 class=skill_title>Continuous Integration and Delivery</h6>
-<div class=skill_percentage>
-<p><span class=counter>75</span>%</p>
-</div>
-</div>
-<div class=skill_bar>
-<div class=bar_inner>
-<div class="bar progress_line" data-width=75></div>
-</div>
-</div>
-</div> 
-<div class="skill_item mt-20">
-<div class=skill_header>
-<h6 class=skill_title>Kubernetes and Docker</h6>
-<div class=skill_percentage>
-<p><span class=counter>90</span>%</p>
-</div>
-</div>
-<div class=skill_bar>
-<div class=bar_inner>
-<div class="bar progress_line" data-width=90></div>
-</div>
-</div>
-</div> 
-<div class="skill_item mt-20">
-<div class=skill_header>
-<h6 class=skill_title>Version Control and Collaboration</h6>
-<div class=skill_percentage>
-<p><span class=counter>75</span>%</p>
-</div>
-</div>
-<div class=skill_bar>
-<div class=bar_inner>
-<div class="bar progress_line" data-width=75></div>
-</div>
-</div>
-</div> 
-<div class="skill_item mt-20">
-  <div class=skill_header>
-  <h6 class=skill_title>Scripting and Automation</h6>
-  <div class=skill_percentage>
-  <p><span class=counter>84</span>%</p>
-  </div>
-  </div>
-  <div class=skill_bar>
-  <div class=bar_inner>
-  <div class="bar progress_line" data-width=84></div>
-  </div>
-  </div>
-  </div> 
-</div> 
-</div> 
-</div>
-</div> 
-</div> 
-</section>
-
-
-<section id="services" class="services_area pt-115 pb-120">
+<nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-6">
-        <div class="section_title text-center pb-30">
-          <h5 class="sub_title">Services</h5>
-          <h3 class="main_title">Services I Provide</h3>
-          <ul class="line">
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div> 
-      </div>
-    </div> 
-    <div class="row">
-      <div class="col-lg-4 col-sm-6">
-        <div class="single_service mt-30 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.2s">
-          <div class="service_icon">
-            <i class="lni lni-vector"></i>
-          </div>
-          <div class="service_content">
-            <h4 class="service_title"><a href="#">DevOps Transformation</a></h4>
-            <p>Streamlining software development and deployment processes through the implementation of robust CI/CD pipelines, automation, and cloud infrastructure management.</p>
-          </div>
-        </div> 
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <div class="single_service mt-30 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
-          <div class="service_icon">
-            <i class="lni lni-layout"></i>
-          </div>
-          <div class="service_content">
-            <h4 class="service_title"><a href="#">Cloud Computing</a></h4>
-            <p>Extensive proficiency in AWS (Amazon Web Services) with a focus on optimizing infrastructure, leveraging services such as EC2, S3, RDS, and Lambda for scalable and resilient cloud architectures.</p>
-          </div>
-        </div> 
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <div class="single_service mt-30 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.8s">
-          <div class="service_icon">
-            <i class="lni lni-ux"></i>
-          </div>
-          <div class="service_content">
-            <h4 class="service_title"><a href="#">Configuration Management</a></h4>
-            <p>Expertise in utilizing tools like Ansible and Terraform to automate the provisioning and configuration of resources, ensuring consistency, efficiency, and Infrastructure as Code (IaC) principles.</p>
-          </div>
-        </div> 
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <div class="single_service mt-30 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.2s">
-          <div class="service_icon">
-            <i class="lni lni-code"></i>
-          </div>
-          <div class="service_content">
-            <h4 class="service_title"><a href="#">Continuous Integration and Delivery</a></h4>
-            <p>Designing and implementing highly efficient CI/CD pipelines using Jenkins, Git, and other industry-leading tools to enable continuous integration, automated testing, and seamless deployment processes.</p>
-          </div>
-        </div> 
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <div class="
+    <a class="navbar-brand text-white font-weight-bold" href="index.html">DP.</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#work">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-single_service mt-30 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
-          <div class="service_icon">
-            <i class="lni lni-briefcase"></i>
-          </div>
-          <div class="service_content">
-            <h4 class="service_title"><a href="#">Containerization and Orchestration</a></h4>
-            <p>Proficient in Docker and Kubernetes, enabling efficient application deployment, scaling, and management in containerized environments.</p>
-          </div>
-        </div> 
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <div class="single_service mt-30 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.8s">
-          <div class="service_icon">
-            <i class="lni lni-bullhorn"></i>
-          </div>
-          <div class="service_content">
-            <h4 class="service_title"><a href="#">Scripting and Automation</a></h4>
-            <p>Strong scripting skills in Python, Shell, and other relevant languages, optimizing CI/CD processes and enhancing development efficiency.</p>
-          </div>
-        </div> 
-      </div>
-    </div> 
-  </div> 
-</section>
-
-<section id="blogs" class="blog_area pt-125">
+<!-- Hero Section -->
+<section id="home" class="header_hero mt-5">
   <div class="container">
-    <div class="row">
-      <div class="col-sm-9">
-        <div class="section_title pb-30">
-          <h5 class="sub_title">Blogs</h5>
-          <h3 class="main_title">Latest Blogs</h3>
-          <ul class="line">
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
+    <div class="row align-items-center">
+      <div class="col-lg-6 col-md-12">
+        <div class="header_hero_content">
+          <h5 class="header_sub_title">Hello, I'm</h5>
+          <h2 class="header_title">Deepesh Patel</h2>
+          <span class="header_sub_title" style="color: #fff; font-size: 1.1rem;">Site Reliability Engineer & Cloud Architect</span>
+          <p>I architect resilient, fault-tolerant multicloud infrastructures across AWS and Azure. With over 10 years of experience, I specialize in streamlining GitOps deployment workflows, enforcing enterprise SOC2/HIPAA compliance, and building automated CI/CD pipelines.</p>
+          <div class="d-flex align-items-center">
+            <a href="mailto:deepeshp656@gmail.com" class="main-btn mr-4">Connect With Me</a>
+            <a href="https://linkedin.com/in/patel1ww" target="_blank" style="color: #0ea5ea; font-size: 2rem; transition: 0.3s;"><i class="lni lni-linkedin-original"></i></a>
+          </div>
         </div>
       </div>
-      <div class="col-sm-3">
-        <div class="blog_btn text-sm-right">
-          <a class="main-btn main-btn-2" href="#">All Blogs</a>
-        </div>
+      <div class="col-lg-6 col-md-12 mt-5 mt-lg-0 text-center text-lg-right">
+        <img src="assets/images/hero.png" alt="Deepesh Patel" class="img-fluid" style="max-height: 500px; border-radius: 12px;">
       </div>
     </div>
-    <div class="row blog_active">
-      <div class="col-lg-4">
-        <div class="single_blog">
-          <div class="blog_image">
-            <img src="assets/images/docker1.jpg" alt="docker">
-          </div>
-          <div class="blog_content">
-            <h4 class="blog_title"><a href="docker-blog.html">Docker: Containerization Explained</a></h4>
-            <p>DevOps Practices</p>
+  </div>
+</section>
+
+<!-- Services / Core Competencies (Interactive 3D Flip Cards) -->
+<section id="services" style="background-color: #f1f5f9; padding: 80px 0;">
+  <div class="container">
+    <div class="section_title">
+      <h5 class="sub_title">Services</h5>
+      <h3 class="main_title">Core Competencies</h3>
+      <p style="color: var(--text-slate-gray); max-width: 600px; margin: 0 auto;">Hover over the cards below to view my delivery metrics and operational success rates.</p>
+    </div> 
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <i class="lni lni-cloud-network card-icon"></i>
+              <h4 class="card-title">Multicloud Architecture</h4>
+              <p>Designing highly available ecosystems across AWS and Azure to optimize resource allocation.</p>
+            </div>
+            <div class="flip-card-back">
+              <h4>Multicloud Architecture</h4>
+              <span class="stat">15+</span>
+              <span class="stat-label">Enterprise Migrations</span>
+              <span class="stat">100%</span>
+              <span class="stat-label">Delivery Success Rate</span>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-4">
-        <div class="single_blog">
-          <div class="blog_image">
-            <img src="assets/images/cloud-security1.jpg" alt="cloud security">
-          </div>
-          <div class="blog_content">
-            <h4 class="blog_title"><a href="cloud-security-blog.html">Cloud Security: Best Practices</a></h4>
-            <p>DevOps Security</p>
+      <!-- Card 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <i class="lni lni-docker card-icon"></i>
+              <h4 class="card-title">Container Orchestration</h4>
+              <p>Engineering resilient container automation utilizing Kubernetes, Docker, and OpenShift.</p>
+            </div>
+            <div class="flip-card-back">
+              <h4>Container Orchestration</h4>
+              <span class="stat">50+</span>
+              <span class="stat-label">Clusters Deployed</span>
+              <span class="stat">99.99%</span>
+              <span class="stat-label">Uptime Maintained</span>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-4">
-        <div class="single_blog">
-          <div class="blog_image">
-            <img src="assets/images/ci-cd5.png" alt="ci/cd">
+      <!-- Card 3 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <i class="lni lni-shield card-icon"></i>
+              <h4 class="card-title">Security & Compliance</h4>
+              <p>Spearheading security overhauls for SOC2/HIPAA compliance, managing SSO, and RBAC.</p>
+            </div>
+            <div class="flip-card-back">
+              <h4>Security & Compliance</h4>
+              <span class="stat">10+</span>
+              <span class="stat-label">Major Audits Passed</span>
+              <span class="stat">0</span>
+              <span class="stat-label">Security Breaches</span>
+            </div>
           </div>
-          <div class="blog_content">
-            <h4 class="blog_title"><a href="ci-cd-blog.html">CI/CD: Building a Robust Pipeline</a></h4>
-            <p>Continuous Integration/Continuous Deployment</p>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <i class="lni lni-code card-icon"></i>
+              <h4 class="card-title">CI/CD & GitOps</h4>
+              <p>Accelerating provisioning with reusable Terraform modules and automated GitHub workflows.</p>
+            </div>
+            <div class="flip-card-back">
+              <h4>CI/CD & GitOps</h4>
+              <span class="stat">500+</span>
+              <span class="stat-label">Pipelines Automated</span>
+              <span class="stat">95%</span>
+              <span class="stat-label">Faster Deployments</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <i class="lni lni-database card-icon"></i>
+              <h4 class="card-title">AI Data Pipelines</h4>
+              <p>Engineering automated data extraction pipelines using advanced AI for digitization of PII data.</p>
+            </div>
+            <div class="flip-card-back">
+              <h4>AI Data Pipelines</h4>
+              <span class="stat">5+</span>
+              <span class="stat-label">Core AI Integrations</span>
+              <span class="stat">100%</span>
+              <span class="stat-label">SLA Adherence</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <i class="lni lni-laptop card-icon"></i>
+              <h4 class="card-title">Developer Tooling</h4>
+              <p>Developing centralized provisioning platforms and on-demand sandbox environments.</p>
+            </div>
+            <div class="flip-card-back">
+              <h4>Developer Tooling</h4>
+              <span class="stat">20+</span>
+              <span class="stat-label">Custom Tools Built</span>
+              <span class="stat">10k+</span>
+              <span class="stat-label">Dev Hours Saved</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div> 
+</section>
+
+<!-- Personal Projects Section (Interactive Flip Cards) -->
+<section id="projects" style="padding: 80px 0; background: #ffffff;">
+  <div class="container">
+    <div class="section_title">
+      <h5 class="sub_title">Portfolio</h5>
+      <h3 class="main_title">Technical & Independent Projects</h3>
+      <p style="color: var(--text-slate-gray); max-width: 600px; margin: 0 auto;">Hover over the projects below to reveal the underlying technology stacks and how I built them.</p>
+    </div>
+    <div class="row">
+      <!-- Project 1 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="flip-card project-flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <i class="lni lni-cogs card-icon"></i>
+              <h4 class="card-title">Self-Hosted AI & OCR Pipeline</h4>
+              <p style="font-size: 0.95rem; color: var(--text-slate-gray);"><strong>What it is:</strong> An internal API for image scanning, text extraction, and audio transcription utilizing self-hosted open-source models.</p>
+            </div>
+            <div class="flip-card-back project-flip-back">
+              <h4>How I built it</h4>
+              <p>Engineered with <strong>Python</strong> using <strong>PaddleOCR</strong> for accurate text extraction, the <strong>Qwen</strong> LLM for data processing, and <strong>Whisper</strong> for speech-to-text.</p>
+              <p>This secure deployment completely isolates the workflow, eliminating external third-party API dependencies and preventing sensitive data leakage.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Project 2 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="flip-card project-flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <i class="lni lni-grid-alt card-icon"></i>
+              <h4 class="card-title">App Hub (Internal App Store)</h4>
+              <p style="font-size: 0.95rem; color: var(--text-slate-gray);"><strong>What it is:</strong> A centralized desktop application installed on all company laptops to securely manage and automate software downloads and installations.</p>
+            </div>
+            <div class="flip-card-back project-flip-back">
+              <h4>How I built it</h4>
+              <p>Developed a high-performance cross-platform application using <strong>Rust</strong> and <strong>Tauri</strong>.</p>
+              <p>Built a dedicated administrative interface allowing IT to upload executables (`.exe`) alongside custom installation scripts, streamlining fleet management across the organization.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Project 3 -->
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div class="flip-card project-flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <i class="lni lni-network card-icon"></i>
+              <h4 class="card-title">On-Demand Branch Sandbox</h4>
+              <p style="font-size: 0.95rem; color: var(--text-slate-gray);"><strong>What it is:</strong> An automated deployment system that provides developers with a dedicated DNS to safely test feature branch code without depending on the Dev environment.</p>
+            </div>
+            <div class="flip-card-back project-flip-back">
+              <h4>How I built it</h4>
+              <p>Configured an <strong>AWS EC2</strong> instance running <strong>Docker Compose</strong>.</p>
+              <p>Built an automation pipeline that triggers a new isolated Docker container for specific code branches and dynamically maps that container to a custom URL via <strong>Cloudflare</strong> domains.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -369,489 +354,177 @@ single_service mt-30 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0
   </div>
 </section>
 
-
-
-<!-- <section id=project class="project_area pt-125">
-  <div class=container>
-  <div class=row>
-  <div class=col-sm-9>
-  <div class="section_title pb-30">
-  <h5 class=sub_title>Portfolio</h5>
-  <h3 class=main_title>Latest Projects</h3>
-  <ul class=line>
-  <li></li>
-  <li></li>
-  <li></li>
-  </ul>
-  </div> 
-  </div>
-  <div class=col-sm-3>
-  <div class="project_btn text-sm-right">
-  <a class="main-btn main-btn-2" href="#">All Works</a>
-  </div> 
-  </div>
-  </div> 
-  <div class="row project_active">
-  <div class=col-lg-4>
-  <div class=single_project>
-  <div class=project_image>
-  <img src="assets/images/project-3.jpg" alt=project>
-  </div>
-  <div class=project_content>
-  <h4 class=project_title><a href="#">Creative Agency Landing page</a></h4>
-  <p>UI/UX Design</p>
-  </div>
-  </div> 
-  </div>
-  <div class=col-lg-4>
-  <div class="single_project ">
-  <div class=project_image>
-  <img src="assets/images/project-1.jpg" alt=project>
-  </div>
-  <div class=project_content>
-  <h4 class=project_title><a href="#">App Landing Page</a></h4>
-  <p>Web Design</p>
-  </div>
-  </div> 
-  </div>
-  <div class=col-lg-4>
-  <div class=single_project>
-  <div class=project_image>
-  <img src="assets/images/project-2.jpg" alt=project>
-  </div>
-  <div class=project_content><h4>Search Engine Optimization</a></h4>
-  <p>Digital Marketing</p>
-  </div>
-  </div> 
-  </div>
-  <div class=col-lg-4>
-  <div class=single_project>
-  <div class=project_image>
-  <img src="assets/images/project-1.jpg" alt=project>
-  </div>
-  <div class=project_content>
-  <h4 class=project_title><a href="#">HTML/CSS Coding</a></h4>
-  <p>Front-end Development</p>
-  </div>
-  </div> 
-  </div>
-  </div> 
-  </div> 
-  </section> -->
-
-
-
-<!-- <section id=pricing class="pricing_area gray-bg pt-115 pb-120">
-<div class=pricing_shape>
-<img src="assets/images/shape-3.png" alt=shape>
-</div> 
-<div class=container>
-<div class="row justify-content-center">
-<div class=col-lg-6>
-<div class="section_title text-center pb-30">
-<h5 class=sub_title>Pricing</h5>
-<h3 class=main_title>Pricing Plans</h3>
-<ul class=line>
-<li></li>
-<li></li>
-<li></li>
-</ul>
-</div> 
-</div>
-</div> 
-<div class="row justify-content-center">
-<div class="col-lg-4 col-md-7 col-sm-8">
-<div class="single_price mt-30 wow fadeInUpBig" data-wow-duration=1.3s data-wow-delay=0.2s>
-<div class=price_header>
-<h4 class=price_title>Basic</h4>
-<span class=price>$75</span>
-<p>Only PSD Service</p>
-</div>
-<div class=price_body>
-<ul>
-<li><i class="lni lni-checkmark"></i> Graphic Design</li>
-<li><i class="lni lni-checkmark"></i> Web Design</li>
-<li><i class="lni lni-close"></i> UI/UX</li>
-<li><i class="lni lni-close"></i> HTML/CSS</li>
-<li><i class="lni lni-close"></i> SEO Marketing</li>
-<li><i class="lni lni-close"></i> Business Analysis</li>
-</ul>
-</div>
-<div class=price_btn>
-<a href="#" class="main-btn main-btn-2">Choose Plan</a>
-</div>
-</div> 
-</div>
-<div class="col-lg-4 col-md-7 col-sm-8">
-<div class="single_price mt-30 wow fadeInUpBig" data-wow-duration=1.3s data-wow-delay=0.5s>
-<span class=sticker>Best Value</span>
-<div class=price_header>
-<h4 class=price_title>Standard</h4>
-<span class=price>$250</span>
-<p>Complete Service</p>
-</div>
-<div class=price_body>
-<ul>
-<li><i class="lni lni-checkmark"></i> Graphic Design</li>
-<li><i class="lni lni-checkmark"></i> Web Design</li>
-<li><i class="lni lni-checkmark"></i> UI/UX</li>
-<li><i class="lni lni-checkmark"></i> HTML/CSS</li>
-<li><i class="lni lni-close"></i> SEO Marketing</li>
-<li><i class="lni lni-close"></i> Business Analysis</li>
-</ul>
-</div>
-<div class=price_btn>
-<a href="#" class=main-btn>Choose Plan</a>
-</div>
-</div> 
-</div>
-<div class="col-lg-4 col-md-7 col-sm-8">
-<div class="single_price mt-30 wow fadeInUpBig" data-wow-duration=1.3s data-wow-delay=0.8s>
-<div class=price_header>
-<h4 class=price_title>Premium</h4>
-<span class=price>$350</span>
-<p>Complete Service</p>
-</div>
-<div class=price_body>
-<ul>
-<li><i class="lni lni-checkmark"></i> Graphic Design</li>
-<li><i class="lni lni-checkmark"></i> Web Design</li>
-<li><i class="lni lni-checkmark"></i> UI/UX</li>
-<li><i class="lni lni-checkmark"></i> HTML/CSS</li>
-<li><i class="lni lni-checkmark"></i> SEO Marketing</li>
-<li><i class="lni lni-checkmark"></i> Business Analysis</li>
-</ul>
-</div>
-<div class=price_btn>
-<a href="#" class="main-btn main-btn-2">Choose Plan</a>
-</div>
-</div> 
-</div>
-</div> 
-</div> 
-</section> -->
-
-
-<!-- <section id=testimonial class="testimonial_area pt-115 pb-120">
-<div class=container>
-<div class="row justify-content-center">
-<div class=col-lg-6>
-<div class="section_title text-center pb-30">
-<h5 class=sub_title>Testmonials</h5>
-<h3 class=main_title>What Clients Says</h3>
-<ul class=line>
-<li></li>
-<li></li>
-<li></li>
-</ul>
-</div> 
-</div>
-</div> 
-<div class="row testimonial_active">
-<div class=col-lg-6>
-<div class="single_testimonial d-sm-flex mt-30">
-<div class=testimonial_author>
-<img src="assets/images/author-1.jpg" alt=author>
-</div>
-<div class="testimonial_content media-body">
-<h4 class=author_name>Rob Hope</h4>
-<span class=sub_title>CEO, OnePageLove</span>
-<p>Lorem ipsum dolor sit amet, consetetuad ipscing elitr, sed diam nonumy eirmodem por invidunt ut labore et dolore magna aliquyam erat sed diam.</p>
-<ul class=review>
-<li><i class="lni lni-star-filled"></i></li>
-<li><i class="lni lni-star-filled"></i></li>
-<li><i class="lni lni-star-filled"></i></li>
-<li><i class="lni lni-star-filled"></i></li>
-<li><i class="lni lni-star-filled"></i></li>
-</ul>
-</div>
-</div> 
-</div>
-<div class=col-lg-6>
-<div class="single_testimonial d-sm-flex mt-30">
-<div class=testimonial_author>
-<img src="assets/images/author-2.jpg" alt=author>
-</div>
-<div class="testimonial_content media-body">
-<h4 class=author_name>Elon Musk</h4>
-<span class=sub_title>Founder, Tesla</span>
-<p>Lorem ipsum dolor sit amet, consetetuad ipscing elitr, sed diam nonumy eirmodem por invidunt ut labore et dolore magna aliquyam erat sed diam.</p>
-<ul class=review>
-<li><i class="lni lni-star-filled"></i></li>
-<li><i class="lni lni-star-filled"></i></li>
-<li><i class="lni lni-star-filled"></i></li>
-<li><i class="lni lni-star-filled"></i></li>
-<li><i class="lni lni-star"></i></li>
-</ul>
-</div>
-</div> 
-</div>
-<div class=col-lg-6>
-<div class="single_testimonial d-sm-flex mt-30">
-<div class=testimonial_author>
-<img src="assets/images/author-1.jpg" alt=author>
-</div>
-<div class="testimonial_content media-body">
-<h4 class=author_name>Musharof Chowdhury</h4>
-<span class=sub_title>Head of Ideas, UIdeck</span>
-<p>Lorem ipsum dolor sit amet, consetetuad ipscing elitr, sed diam nonumy eirmodem por invidunt ut labore et dolore magna aliquyam erat sed diam.</p>
-<ul class=review>
-<li><i class="lni lni-star-filled"></i></li>
-<li><i class="lni lni-star-filled"></i></li>
-<li><i class="lni lni-star-filled"></i></li>
-<li><i class="lni lni-star-filled"></i></li>
-<li><i class="lni lni-star"></i></li>
-</ul>
-</div>
-</div> 
-</div>
-</div> 
-</div> 
-</section> -->
-
-
-<section id=counter class="counter_area gray-bg pt-70 pb-120">
-<div class=container>
-<div class=row>
-<div class="col-lg-3 col-sm-6">
-<div class="single_counter mt-50 d-flex align-items-center wow fadeIn" data-wow-duration=1.3s data-wow-delay=0.2s>
-<div class=counter_icon>
-<i class="lni lni-checkmark-circle"></i>
-</div>
-<div class="counter_content media-body">
-<span class=count><span class=counter>97</span>+</span>
-<p>Projects Done</p>
-</div>
-</div> 
-</div>
-<div class="col-lg-3 col-sm-6">
-<div class="single_counter mt-50 d-flex align-items-center wow fadeIn" data-wow-duration=1.3s data-wow-delay=0.4s>
-<div class=counter_icon>
-<i class="lni lni-emoji-happy"></i>
-</div>
-<div class="counter_content media-body">
-<span class=count><span class=counter>34</span></span>
-<p>Satisfied Clients</p>
-</div>
-</div> 
-</div>
-<div class="col-lg-3 col-sm-6">
-<div class="single_counter mt-50 d-flex align-items-center wow fadeIn" data-wow-duration=1.3s data-wow-delay=0.6s>
-<div class=counter_icon>
-<i class="lni lni-bolt"></i>
-</div>
-<div class="counter_content media-body">
-<span class=count><span class=counter>7</span></span>
-<p>Active Projects</p>
-</div>
-</div> 
-</div>
-<div class="col-lg-3 col-sm-6">
-<div class="single_counter mt-50 d-flex align-items-center wow fadeIn" data-wow-duration=1.3s data-wow-delay=0.8s>
-<div class=counter_icon>
-<i class="lni lni-pyramids"></i>
-</div>
-<div class="counter_content media-body">
-<span class=count><span class=counter>8</span></span>
-<p>Years Experience</p>
-</div>
-</div> 
-</div>
-</div> 
-</div> 
-</section>
-
-<section id=work class="work_experience_area pt-115">
-  <div class=container>
-  <div class="row justify-content-center">
-  <div class=col-lg-6>
-  <div class="section_title text-center pb-30">
-  <h5 class=sub_title>Experience</h5>
-  <h3 class=main_title>Work Experience</h3>
-  <ul class=line>
-  <li></li>
-  <li></li>
-  <li></li>
-  </ul>
-  </div>
-  </div>
-  </div>
-  <div class="work_experience">
+<!-- Work Experience Section -->
+<section id="work" class="work_experience_area" style="background-color: #f1f5f9;">
+  <div class="container">
+    <div class="section_title">
+      <h5 class="sub_title">Experience</h5>
+      <h3 class="main_title">Professional History</h3>
+    </div>
+    
     <div class="row">
-      <div class="col-lg-12">
-        <div class="single_experience d-lg-flex align-items-center flex-wrap wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.2s">
-          <div class="experience_title order-last">
-            <h3 class="title">Senior Software Engineer</h3>
-            <p>Talent Inc., United States, Remote</p>
-            <span class="date">January 2022</span>
+      <div class="col-lg-10 offset-lg-1">
+        <div class="single_experience">
+          <div class="experience_title">
+            <h3 class="title">Sr. DevOps Engineer / Lead</h3>
+            <p>CloudHire | Hyderabad, India (Remote)</p>
+            <span class="date">Dec 2023 — Present</span>
           </div>
-          <div class="experience_number">
-            <span>01</span>
+          <div class="experience_content"><p>Architected multicloud environments cutting costs by 40-70%. Designed on-demand sandboxes reducing testing overhead by 30%. Achieved SOC2/HIPAA compliance via VPNs, SSO, and DNS routing. Built custom AI data extraction CI/CD pipelines.</p></div>
+        </div>
+        
+        <div class="single_experience">
+          <div class="experience_title">
+            <h3 class="title">Technical Consultant</h3>
+            <p>Amazatic Solutions | Pune, India (Remote)</p>
+            <span class="date">May 2023 — Present</span>
           </div>
-          <div class="experience_content order-first">
-            <p>As a Senior Software Engineer at Talent Inc., I led day-to-day operations, including ticket handling, monitoring, troubleshooting, and maintenance. I played a key role in the DevOps migration and automation, implementing build automation processes. Additionally, I managed AWS services (EC2, Route53, S3, RDS, Dynamo DB, SNS, SQS, IAM) for high-availability and fault tolerance, reducing infrastructure costs by $500,000. I led the use of Ansible for configuration management and utilized Docker and Kubernetes for container orchestration. My responsibilities also included extensive work with GitHub Actions for continuous integration and end-to-end automation. I implemented security and network compliance standards to meet SOC2 and GDPR requirements.</p>
+          <div class="experience_content"><p>Deployed scalable cloud architectures mapped to compliance benchmarks, ensuring zero data loss during migrations. Developed strict multi-tenant security protocols reducing vulnerabilities by 45%.</p></div>
+        </div>
+
+        <div class="single_experience">
+          <div class="experience_title">
+            <h3 class="title">Senior Software Engineer (SRE)</h3>
+            <p>Talent Inc. | United States (Remote)</p>
+            <span class="date">Jul 2021 — Dec 2023</span>
+          </div>
+          <div class="experience_content"><p>Administered highly available AWS services (EC2, Route53, S3, RDS), improving load scaling by 40%. Engineered Docker/Kubernetes container orchestration and reduced provisioning errors by 80% via Ansible.</p></div>
+        </div>
+        
+        <!-- Hidden Experience -->
+        <div id="more-experience" style="display: none;">
+          <div class="single_experience">
+            <div class="experience_title">
+              <h3 class="title">DevOps / AWS Engineer</h3>
+              <p>CGI | Toronto, Canada</p>
+              <span class="date">Sep 2020 — Oct 2021</span>
+            </div>
+            <div class="experience_content"><p>Engineered infrastructure for Ontario Government digital wallet. Supervised OpenShift clusters for Interac with zero breaches. Accelerated provisioning by 40% using Terraform.</p></div>
+          </div>
+          
+          <div class="single_experience">
+            <div class="experience_title">
+              <h3 class="title">Software Eng. (Cloud Infra)</h3>
+              <p>HomeX | Toronto, Canada</p>
+              <span class="date">Mar 2020 — Feb 2021</span>
+            </div>
+            <div class="experience_content"><p>Automated build processes using Jenkins, Ansible, and Terraform (60% faster deployments). Deployed serverless stacks with AWS Lambda, dropping overhead by 30%.</p></div>
+          </div>
+          
+          <div class="single_experience">
+            <div class="experience_title">
+              <h3 class="title">Programmer Analyst</h3>
+              <p>Cognizant | Pune, India</p>
+              <span class="date">Jan 2016 — Aug 2018</span>
+            </div>
+            <div class="experience_content"><p>Maintained Informatica data ingestion pipelines ensuring 100% SLA adherence. Awarded Employee of the Year for execution excellence.</p></div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="single_experience d-lg-flex align-items-center flex-wrap wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.5s">
-          <div class="experience_title text-lg-right">
-            <h3 class="title">DevOps/AWS Engineer</h3>
-            <p>CGI, Toronto, Ontario, Canada, Windsor</p>
-            <span class="date">January 2021 — January 2022</span>
-          </div>
-          <div class="experience_number">
-            <span>02</span>
-          </div>
-          <div class="experience_content">
-            <p>As a DevOps/AWS Engineer at CGI, I led and mentored a team of DevOps engineers, providing technical guidance and fostering innovation. I designed scalable and highly available cloud architectures using AWS CloudFormation, Terraform, and Kubernetes. Additionally, I worked extensively with Azure DevOps Services and pipelines to facilitate CI/CD processes. I managed OpenShift clusters, overseeing access and RBAC policies. I established and enforced DevOps best practices and standards, ensuring consistency in development processes.</p>
-          </div>
+        
+        <div class="text-center mt-4 d-flex justify-content-center align-items-center flex-wrap">
+          <button id="toggle-experience-btn" class="main-btn m-2" onclick="toggleExperience()">View Older Roles</button>
+          <a href="jobs.html" class="outline-btn m-2">View Interactive Timeline</a>
         </div>
+
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="single_experience d-lg-flex align-items-center flex-wrap wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.8s">
-          <div class="experience_title order-last">
-            <h3 class="title">Software Engineer Cloud Infrastructure</h3>
-            <p>HomeX, Toronto, Ontario, Canada, Windsor</p>
-            <span class="date">February 2020 — January 2021</span>
-          </div>
-          <div class="experience_number">
-            <span>03</span>
-          </div>
-          <div class="experience_content order-first">
-            <p>As a Software Engineer in Cloud Infrastructure at HomeX, I automated build and deployment processes, enhancing the user experience and building a continuous integration system. I implemented Software Release Management strategies and managed AWS services like Beanstalk, Lambda, and EC2. Additionally, I utilized Jenkins, Ansible, and Terraform for CI/CD and infrastructure automation. I proposed and implemented new branching strategies for development teams.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="single_experience d-lg-flex align-items-center flex-wrap wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.5s">
-          <div class="experience_title text-lg-right">
-            <h3 class="title">System Administrator</h3>
-            <p>BMO Capital Markets, Toronto, Canada Area, Toronto</p>
-            <span class="date">January 2019 — February 2020</span>
-          </div>
-          <div class="experience_number">
-            <span>04</span>
-          </div>
-          <div class="experience_content">
-            <p>As a System Administrator at BMO Capital Markets, I configured critical network services, including NFS, FTP, NTP, and NIS, ensuring seamless operations for various departments. I demonstrated expertise in working with high availability, high-performance, multi-data center systems, and hybrid cloud environments. Additionally, I managed scheduling tasks, including cron jobs and task scheduler, to automate various processes. I proficiently resolved complex issues, ranging from system resources to application stack traces. I ensured the daily execution of build operations in an automated and continuous process. I managed database support, including MS SQL upgrades on Windows servers, and compiled code for test environments through automated processes. I enhanced the speed, efficiency, and scalability of the continuous integration environment. I maintained comprehensive event logs and demonstrated expertise in web servers, security, DNS, and file systems.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="single_experience d-lg-flex align-items-center flex-wrap wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.5s">
-          <div class="experience_title order-last">
-            <h3 class="title">Programmer Analyst</h3>
-            <p>Cognizant Technology Solutions, India, Pune</p>
-            <span class="date">January 2016 — August 2018</span>
-          </div>
-          <div class="experience_number">
-            <span>05</span>
-          </div>
-          <div class="experience_content order-first">
-            <p>As a Programmer Analyst at Cognizant Technology Solutions in India, I actively participated in the release cycle of the product across multiple environments, including DEV, INT, QA, UAT, and PROD. I built and deployed artifacts using version control tools like GIT and Maven. I managed the environments and designed instance strategies. Deploying artifacts on Apache Tomcat application server, I developed UNIX and Perl scripts for manual code deployment and environment configuration changes. I created release notes, executed validation/test cases, and implemented backup strategies for critical systems.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   </div>
 </section>
 
-
-
-<section id=contact class=call_to_action_area>
-<div class=container>
-<div class="call_to_action_wrapper wow fadeIn" data-wow-duration=1.3s data-wow-delay=0.5s>
-<div class=row>
-<div class=col-lg-12>
-<div class="call_to_action_box d-md-flex justify-content-between align-items-center">
-<div class=call_to_action_content>
-<h3 class=action_title>Ready to Bring Your Project to Life?</h3>
-<ul class=line>
-<li></li>
-<li></li>
-<li></li>
-</ul>
-<p>As a skilled professional, I am excited to hear about your project ideas and discuss how I can help make them a reality. With my expertise and dedication, I am committed to delivering innovative solutions tailored to your specific requirements. Whether it's software development, web design, or any other technical endeavor, I have the knowledge and skills to bring your vision to life.
-
-  I understand the challenges of being a solo entrepreneur and the importance of finding the right partner to support your project. Let's collaborate and turn your ideas into a successful reality. Contact me today to start the journey towards achieving your goals. Together, we can make it happen!</p>
-</div> 
-<div class=call_to_action_btn>
-<a href="https://preview.uideck.com/cdn-cgi/l/email-protection#681b07050d07060d280d10090518040d460b0705573b1d0a020d0b1c5520014d5a583c000d1a0d" class=main-btn>HIRE ME</a>
-</div> 
-</div> 
-</div>
-</div> 
-</div> 
-</div> 
+<!-- Blog Preview Section -->
+<section id="blog" style="padding: 80px 0; background: #ffffff;">
+  <div class="container">
+    <div class="section_title">
+      <h5 class="sub_title">Insights</h5>
+      <h3 class="main_title">Recent Blog Posts</h3>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="custom-card" style="padding: 25px;">
+          <span style="color: #0ea5ea; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">DevOps Practices</span>
+          <h4 class="card-title mt-2"><a href="docker-blog.html" style="color: inherit; text-decoration: none;">Docker: Containerization Explained</a></h4>
+          <p style="font-size: 0.95rem; color: var(--text-slate-gray);">An overview of how lightweight containers automate deployments and ensure consistency across infrastructures.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="custom-card" style="padding: 25px;">
+          <span style="color: #0ea5ea; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Pipeline Automation</span>
+          <h4 class="card-title mt-2"><a href="ci-cd-blog.html" style="color: inherit; text-decoration: none;">CI/CD: Building a Robust Pipeline</a></h4>
+          <p style="font-size: 0.95rem; color: var(--text-slate-gray);">The essential components of continuous integration and delivery to ensure faster delivery and higher quality.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="custom-card" style="padding: 25px;">
+          <span style="color: #0ea5ea; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">DevOps Security</span>
+          <h4 class="card-title mt-2"><a href="#" style="color: inherit; text-decoration: none;">Cloud Security: Best Practices</a></h4>
+          <p style="font-size: 0.95rem; color: var(--text-slate-gray);">Strategies for enforcing strict RBAC policies, SOC2 compliance, and securing multitenant architectures.</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-3">
+      <a href="blog.html" class="main-btn">View All Blogs</a>
+    </div>
+  </div>
 </section>
 
+<!-- Education Section -->
+<section id="education" style="padding: 80px 0; background: #f1f5f9;">
+  <div class="container">
+    <div class="section_title">
+      <h5 class="sub_title">Academics</h5>
+      <h3 class="main_title">Education & Certifications</h3>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="custom-card">
+          <i class="lni lni-graduation card-icon"></i>
+          <h4 class="card-title">Master of Applied Computing</h4>
+          <p style="font-weight: 600; color: #0ea5ea;">University of Windsor | 2018 – 2020</p>
+          <p>Grade: 4.7 / 5 | Specialization in Computer Science</p>
+        </div>
+      </div>
+      <div class="col-lg-6 mb-4">
+        <div class="custom-card">
+          <i class="lni lni-graduation card-icon"></i>
+          <h4 class="card-title">Bachelor of Engineering</h4>
+          <p style="font-weight: 600; color: #0ea5ea;">Rajiv Gandhi Prodyogiki Vishwavidyalaya | 2011 – 2015</p>
+          <p>Grade: A | Specialization in Computer Science</p>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4 text-center">
+      <div class="col-12">
+        <p style="font-weight: 600; color: var(--bg-oxford-blue);">Active Certifications:</p>
+        <p>HashiCorp Terraform Associate | Microsoft Azure Fundamentals (AZ-900) | AWS Cloud Practitioner</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<footer id=footer class="footer_area gray-bg pt-115 pb-120">
-<div class=container>
-<div class=row>
-<div class=col-lg-12>
-<div class="footer_content text-center">
-<a href="#"><img src="assets/images/logo.svg" alt=Logo></a>
-<ul class=footer_social>
-<li><a href="#"><i class="lni lni-facebook"></i></a></li>
-<li><a href="#"><i class="lni lni-twitter"></i></a></li>
-<li><a href="#"><i class="lni lni-instagram"></i></a></li>
-<li><a href="#"><i class="lni lni-linkedin"></i></a></li>
-</ul>
-<span class=email><a href="">patel1ww@uwindsor.ca</a></span>
-<ul class=footer_menu>
-<li><a href="#">Home</a></li>
-<li><a href="#">About Us</a></li>
-<li><a href="#">Service</a></li>
-<li><a href="#">Portfolio</a></li>
-<li><a href="#">Pricing</a></li>
-<li><a href="#">Contact Us</a></li>
-</ul>
-<p class="credit pt-45">Template Designed and Developed by <a href="https://uideck.com/" rel=nofollow>UIdeck</a></p>
-</div> 
-</div>
-</div> 
-</div> 
+<!-- Footer -->
+<footer class="footer_area">
+  <div class="container">
+    <div class="mb-4">
+      <a href="https://linkedin.com/in/patel1ww" target="_blank"><i class="lni lni-linkedin-original"></i></a>
+      <a href="mailto:deepeshp656@gmail.com"><i class="lni lni-envelope"></i></a>
+    </div>
+    <p>&copy; 2026 Deepesh Patel. All Rights Reserved. | deepeshp656@gmail.com</p>
+  </div> 
 </footer>
 
+<script>
+  function toggleExperience() {
+    const moreExp = document.getElementById('more-experience');
+    const btn = document.getElementById('toggle-experience-btn');
+    if (moreExp.style.display === 'none') {
+      moreExp.style.display = 'block';
+      btn.innerText = 'Show Less History';
+    } else {
+      moreExp.style.display = 'none';
+      btn.innerText = 'View Older Roles';
+    }
+  }
+</script>
 
-
-
-
-
-<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/vendor/jquery-1.12.4.min.js.pagespeed.jm.29OAZzvhfX.js"></script>
-<script src="assets/js/vendor%2c_modernizr-3.7.1.min.js%2bpopper.min.js%2bbootstrap.min.js.pagespeed.jc.Cr9hLWz-S6.js"></script><script>eval(mod_pagespeed_o5_3EsFaYA);</script>
-
-<script>eval(mod_pagespeed_Yq3rd870qr);</script>
-<script>eval(mod_pagespeed_o23G4OyrlM);</script>
-
-<script src="assets/js/slick.min.js%2bajax-contact.js%2bjquery.appear.min.js%2bwaypoints.min.js%2bjquery.counterup.min.js%2bjquery.easing.min.js%2bscrolling-nav.js%2bwow.min.js%2bm"></script><script>eval(mod_pagespeed_uIhKS4vltD);</script>
-
-<script>eval(mod_pagespeed_Tj2NoL6n$K);</script>
-
-<script>eval(mod_pagespeed_HcrXhel2F4);</script>
-
-<script>eval(mod_pagespeed_0yMKMNDcrN);</script>
-<script>eval(mod_pagespeed_H_Z1$hva5h);</script>
-
-<script>eval(mod_pagespeed_xkKoGffKwc);</script>
-<script>eval(mod_pagespeed_f3p046_G91);</script>
-
-<script>eval(mod_pagespeed_KL04Jq9RbQ);</script>
-
-<script>eval(mod_pagespeed_egeUrTXRXo);</script>
-<script>(function(){var js = "window['__CF$cv$params']={r:'7d6f8b813f9b73d3',m:'MjrFpaXC_O9ntRrYnFEnklS1xXHbRXMlj9i0u.4BOhM-1686713953-0-AdcdXooU3f0WBohVQooL/Rpn34LysrrhT2PJ3W3JwHah'};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='../../cdn-cgi/challenge-platform/h/g/scripts/jsd/6cdb09c9/invisible.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon='{"rayId":"7d6f8b813f9b73d3","version":"2023.4.0","r":1,"b":1,"token":"9a6015d415bb4773a0bff22543062d3b","si":100}' crossorigin="anonymous"></script>
 </body>
-
-<!-- Mirrored from preview.uideck.com/items/freelancer/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Jun 2023 03:39:23 GMT -->
 </html>

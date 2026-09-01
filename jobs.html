@@ -1,159 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Job History Timeline</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            padding: 20px;
-        }
+  <meta charset="utf-8">
+  <title>Deepesh Patel | Career Timeline</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  
+  <style>
+    :root {
+      --bg-oxford-blue: hsla(222, 44%, 13%, 1);
+      --gradient-2: linear-gradient(90deg, #0ea5ea, #0bd1d1);
+    }
+    body { font-family: 'Noto Sans', sans-serif; background-color: #f8fafc; color: #334155; padding: 40px 20px;}
+    .page-title { text-align: center; color: var(--bg-oxford-blue); font-weight: 800; margin-bottom: 50px; }
+    .back-btn { text-decoration: none; color: #0ea5ea; font-weight: 600; margin-bottom: 20px; display: inline-block;}
+    
+    .timeline { position: relative; max-width: 800px; margin: 0 auto; }
+    .timeline::before {
+      content: ''; position: absolute; width: 4px; background: #e2e8f0;
+      top: 0; bottom: 0; left: 50%; margin-left: -2px; border-radius: 4px;
+    }
+    
+    .timeline-item { position: relative; margin-bottom: 50px; opacity: 0; transform: translateY(30px); transition: 0.6s ease; }
+    .timeline-item.in-view { opacity: 1; transform: translateY(0); }
+    
+    .timeline-item::before {
+      content: ''; position: absolute; width: 20px; height: 20px;
+      background-image: var(--gradient-2); border-radius: 50%;
+      top: 20px; left: 50%; margin-left: -10px; z-index: 2;
+    }
 
-        h1 {
-            text-align: center;
-            color: #333;
-        }
+    .timeline-card {
+      width: 45%; background: #fff; padding: 25px; border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05); position: relative;
+      border: 1px solid #f1f5f9;
+    }
+    .timeline-item:nth-child(odd) .timeline-card { margin-left: auto; }
+    .timeline-item:nth-child(even) .timeline-card { margin-right: auto; text-align: right; }
 
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            width: 2px;
-            background-color: #333;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -1px;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 50px;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            width: 15px;
-            height: 2px;
-            background-color: #333;
-            top: -26px;
-            left: 50%;
-            margin-left: -8px;
-        }
-
-        .timeline-item:first-child::before {
-            display: none;
-        }
-
-        .timeline-card {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .timeline-card:hover {
-            background-color: #ff8c00; /* Change the hover color as desired */
-        }
-
-        .timeline-content h3 {
-            color: #333;
-            margin-top: 0;
-        }
-
-        .timeline-content p {
-            color: #666;
-        }
-
-        .clearfix::after {
-            content: '';
-            display: table;
-            clear: both;
-        }
-    </style>
+    .timeline-content h3 { color: var(--bg-oxford-blue); font-weight: 800; font-size: 1.3rem; margin-bottom: 5px; }
+    .timeline-content h4 { color: #0ea5ea; font-weight: 700; font-size: 1rem; margin-bottom: 10px; }
+    .timeline-content p { color: #64748b; font-size: 0.9rem; font-weight: 600; margin: 0;}
+    
+    @media (max-width: 768px) {
+      .timeline::before { left: 20px; }
+      .timeline-item::before { left: 20px; }
+      .timeline-card { width: calc(100% - 50px); margin-left: 50px !important; text-align: left !important; }
+    }
+  </style>
 </head>
 <body>
-    <h1>Job History Timeline</h1>
+
+  <div class="container">
+    <a href="index.html" class="back-btn">&larr; Back to Portfolio</a>
+    <h1 class="page-title">Career Timeline</h1>
 
     <div class="timeline">
-        <div class="timeline-item">
-            <div class="timeline-card">
-                <div class="timeline-content">
-                    <h3>Company B</h3>
-                    <p>Job Title</p>
-                    <p>Start Date - End Date</p>
-                </div>
-            </div>
-        </div>
-        <div class="timeline-item">
-            <div class="timeline-card">
-                <div class="timeline-content">
-                    <h3>Company A</h3>
-                    <p>Job Title</p>
-                    <p>Start Date - End Date</p>
-                </div>
-            </div>
-        </div>
-        <div class="timeline-item">
-            <div class="timeline-card">
-                <div class="timeline-content">
-                    <h3>Company C</h3>
-                    <p>Job Title</p>
-                    <p>Start Date - End Date</p>
-                </div>
-            </div>
-        </div>
-        <!-- Add more timeline items as needed -->
+      <div class="timeline-item"><div class="timeline-card"><div class="timeline-content">
+        <h3>CloudHire</h3><h4>Sr. DevOps Engineer / Lead</h4><p>Dec 2023 - Present</p>
+      </div></div></div>
+      
+      <div class="timeline-item"><div class="timeline-card"><div class="timeline-content">
+        <h3>Amazatic Solutions</h3><h4>Technical Consultant</h4><p>May 2023 - Present</p>
+      </div></div></div>
+      
+      <div class="timeline-item"><div class="timeline-card"><div class="timeline-content">
+        <h3>Talent Inc.</h3><h4>Senior Software Engineer (SRE)</h4><p>Jul 2021 - Dec 2023</p>
+      </div></div></div>
+
+      <div class="timeline-item"><div class="timeline-card"><div class="timeline-content">
+        <h3>CGI</h3><h4>DevOps / AWS Engineer</h4><p>Sep 2020 - Oct 2021</p>
+      </div></div></div>
+
+      <div class="timeline-item"><div class="timeline-card"><div class="timeline-content">
+        <h3>HomeX</h3><h4>Software Eng. (Cloud Infra)</h4><p>Mar 2020 - Feb 2021</p>
+      </div></div></div>
+
+      <div class="timeline-item"><div class="timeline-card"><div class="timeline-content">
+        <h3>Cognizant</h3><h4>Programmer Analyst</h4><p>Jan 2016 - Aug 2018</p>
+      </div></div></div>
     </div>
+  </div>
 
-    <script>
-        // JavaScript code to animate the timeline items
-        document.addEventListener("DOMContentLoaded", function() {
-            var timelineItems = document.querySelectorAll(".timeline-item");
-
-            function isElementInViewport(el) {
-                var rect = el.getBoundingClientRect();
-                return (
-                    rect.top >= 0 &&
-                    rect.left >= 0 &&
-                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-                );
-            }
-
-            function handleScroll() {
-                for (var i = 0; i < timelineItems.length; i++) {
-                    if (isElementInViewport(timelineItems[i])) {
-                        timelineItems[i].classList.add("in-view");
-                    }
-                }
-            }
-
-            window.addEventListener("scroll", handleScroll);
-            handleScroll();
-
-            var delay = 0;
-            for (var i = 0; i < timelineItems.length; i++) {
-                (function(item, delay) {
-                    setTimeout(function() {
-                        item.style.opacity = 1;
-                        item.style.transform = "translateY(0)";
-                    }, delay);
-                })(timelineItems[i], delay);
-                delay += 200; // Change the delay value as desired
-            }
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const items = document.querySelectorAll(".timeline-item");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          }
         });
-    </script>
+      }, { threshold: 0.1 });
+      items.forEach(item => observer.observe(item));
+      setTimeout(() => { items[0].classList.add("in-view"); }, 100);
+    });
+  </script>
 </body>
 </html>

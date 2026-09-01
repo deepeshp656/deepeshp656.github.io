@@ -1,50 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset=utf-8>
-
-    <title>Deepesh Patel</title>
-    <meta name=description content="">
-    <meta name=viewport content="width=device-width, initial-scale=1">
-    
-    <link rel="shortcut icon" href="assets/images/xfavicon.png.pagespeed.ic.oF1zZt4DEs.png" type="image/png">
-    
-    <link rel=stylesheet href="assets/css/A.animate.css%2bslick.css%2blineicons.css%2bbootstrap.min.css%2bdefault.css%2cMcc.w-QmTdwWk2.css.pagespeed.cf.feBWxFu8ZT.css">
-    
-    
-    
-    
-    
-    <link rel=stylesheet href="assets/css/A.style.css.pagespeed.cf.MOZv-lI8IM.css">
+  <meta charset="utf-8">
+  <title>Deepesh Patel | Technical Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <style>
+    :root {
+      --bg-oxford-blue: hsla(222, 44%, 13%, 1);
+      --bg-oxford-blue-2: hsla(222, 47%, 11%, 1);
+      --gradient-2: linear-gradient(90deg, #0ea5ea, #0bd1d1 51%, #0ea5ea);
+      --shadow-1: 0 8px 20px 0 hsla(0, 0%, 0%, 0.05);
+    }
+    body { font-family: 'Noto Sans', sans-serif; background-color: #f8fafc; color: #334155; }
+    .navbar { background-color: var(--bg-oxford-blue-2); padding: 15px 0; }
+    .navbar-nav .nav-link { color: #fff !important; font-weight: 500; margin: 0 10px; }
+    .page-header { background-color: var(--bg-oxford-blue-2); color: #fff; padding: 100px 0 60px; text-align: center; }
+    .page-header h1 { font-weight: 800; color: #0ea5ea; }
+    .blog-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-1); margin-bottom: 30px; transition: 0.3s; border: 1px solid #f1f5f9; }
+    .blog-card:hover { transform: translateY(-5px); border-color: #0ea5ea; }
+    .blog-content { padding: 30px; }
+    .blog-tag { color: #0ea5ea; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 10px; display: block; }
+    .blog-title { color: var(--bg-oxford-blue); font-weight: 700; font-size: 1.4rem; margin-bottom: 15px; text-decoration: none;}
+    .blog-title:hover { color: #0ea5ea; text-decoration: none;}
+  </style>
 </head>
 <body>
-    <!-- Copy the header from your index.html file -->
 
-    <section id="blog" class="portfolio_area pt_30 pb_70">
-        <div class="container">
-            <div class="section_title text-center pb_30">
-                <h3 class="title">Blog</h3>
-            </div> 
-            <div class="portfolio_menu">
-                <ul class="nav justify-content-center">
-                    <li>
-                        <div class="portfolio_item">
-                            <img src="path-to-your-blog-image" alt="blog-image">
-                            <div class="overlay">
-                                <div class="item_info">
-                                    <h3>Linux Administration Post 1</h3>
-                                    <p>Summary of the post...</p>
-                                    <a href="blog-post-1.html" class="main-btn">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- More blog posts... -->
-                </ul>
-            </div>
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand text-white font-weight-bold" href="index.html">DP.</a>
+    <ul class="navbar-nav ml-auto flex-row">
+      <li class="nav-item"><a class="nav-link" href="index.html">Back to Portfolio</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <h1>Technical Blog</h1>
+    <p>Insights on DevOps, Cloud Security, and CI/CD Pipelines</p>
+  </div>
+</div>
+
+<section style="padding: 80px 0;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="blog-card">
+          <div class="blog-content">
+            <span class="blog-tag">DevOps Practices</span>
+            <a href="docker-blog.html" class="blog-title">Docker: Containerization Explained</a>
+            <p>An overview of how lightweight containers automate deployments and ensure consistency across infrastructures.</p>
+          </div>
         </div>
-    </section>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="blog-card">
+          <div class="blog-content">
+            <span class="blog-tag">Pipeline Automation</span>
+            <a href="ci-cd-blog.html" class="blog-title">CI/CD: Building a Robust Pipeline</a>
+            <p>The essential components of continuous integration and delivery to ensure faster delivery and higher quality.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="blog-card">
+          <div class="blog-content">
+            <span class="blog-tag">DevOps Security</span>
+            <a href="#" class="blog-title">Cloud Security: Best Practices</a>
+            <p>Strategies for enforcing strict RBAC policies, SOC2 compliance, and securing multitenant architectures.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Copy the footer from your index.html file -->
 </body>
 </html>
